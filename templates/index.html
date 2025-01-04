@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NARFU</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="logo.png" alt="Logo">
+        <button onclick="showContent('inicio')">Inicio</button>
+        <button onclick="showContent('Formulario')">Tu Huerto</button>
+        <button onclick="showContent('graficos')">Gráficos y Datos</button>
+        <!--<button onclick="showContent('inicio')">Algo sise</button>-->
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h1>Plantación de [USUARIO]</h1>
+            <p>19/07/2024</p>
+        </div>
+        <div class="content">
+            <!-- PESTAÑAS -->
+            <div id="inicio">
+                <div style="font-size: large;">NECESIDAD DE RIEGO:
+                    <div class="box" style="background-color: #dedcc0; font-size: xx-large;">
+                        AGUA NECESARIA:
+                    </div>
+                </div>
+                <div class="grid">
+                    <div style="font-size: large; margin-left: 40%; width: 300px;">ESTADO DEL HUERTO:
+                        <div id="data-container" class="box" style="background-color: #d4f7d4;"></div>
+                    </div>
+                    <div style="font-size: large; margin-left: 30%;">CLIMA:
+                        <div id="climate-container" class="box" style="background-color: #f7d4d4;"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- PESTAÑAS -->
+            <div class="grid" id="Formulario" class="hidden" >
+                <div class="Formulario">
+                    <h2>DATOS DE TU HUERTO</h2>
+                    <div class="grid">
+                        <div class="box" style="padding: 8%; background-color: #eef7d4; width: 350px;">
+                            <form id="huerto-form">
+                                <div class="form-group">
+                                    <label for="area">Área:</label>
+                                    <input type="text" id="area" name="area" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sistema-riego">Sistema de Riego:</label>
+                                    <select id="sistema-riego" name="sistema-riego" required>
+                                        <option value="goteo">Goteo</option>
+                                        <!-- <option value="aspersión">Aspersión</option> -->
+                                        <!-- <option value="exudación">Exudación</option> -->
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="distancia-gotero">Distancia de Gotero:</label>
+                                    <input type="text" id="distancia-gotero" name="distancia-gotero" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="caudal-gotero">Caudal de Gotero:</label>
+                                    <input type="text" id="caudal-gotero" name="caudal-gotero" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cantidad-goteros">Cantidad de Goteros:</label>
+                                    <input type="text" id="cantidad-goteros" name="cantidad-goteros" required>
+                                </div>
+                                <button type="submit">Guardar</button>
+                            </form>
+                        </div>
+                        <div class="box" style="background-color: #eef7d4; margin-left: 120px; width: 300px; font-size: larger;">
+                            Area: 9 m^2  <br>
+                            Sistema de Riego: Goteo  <br>
+                            Distancia de Gotero: 2 mts  <br>
+                            Caudal de Gotero: 4 L/hr  <br>
+                            Cantidad de Goteros: 2  <br>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
