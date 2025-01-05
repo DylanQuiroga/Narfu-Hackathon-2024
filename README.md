@@ -52,3 +52,7 @@ Gracias a este proyecto, logramos obtener el segundo lugar de la Hackathon 2024 
 La pagina se adaptó con datos estáticos ya que la base de datos ya no existe y no poseo los componentes para volver a montarlo
 
 <a href="https://narfu.vercel.app/">Clickeame para ir a la página Narfu</a>
+
+# Aclaración
+
+Este repositorio a sido reconstruido eliminando datos sensibles para evitar su mal uso.
